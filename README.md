@@ -1,3 +1,3 @@
 # Library Operating Program
 
-Raboczki Csongor's project for Advanced C++ lesson at Széchenyi István University
+Raboczki Csongor's project for Advanced C++(GKNB_INTM026) course at Széchenyi István University
