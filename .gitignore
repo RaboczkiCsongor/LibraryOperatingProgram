@@ -1,8 +1,0 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-/.vs/LibraryOperatingProgram/v16/Browse.VC.db
-/LibraryOperatingProgram/.vs/LibraryOperatingProgram/v16
-/LibraryOperatingProgram/Debug
-/LibraryOperatingProgram/LibraryOperatingProgram/Debug/LibraryO.d997eba1.tlog
-/LibraryOperatingProgram/LibraryOperatingProgram/Debug
