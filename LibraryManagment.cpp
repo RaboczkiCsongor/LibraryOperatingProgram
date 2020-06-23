@@ -7,5 +7,5 @@ int main()
     Book TestBookTwo("Harry Potter", 700);
     std::cout << TestBook.getName() << std::endl;
     std::cout << TestBookTwo.getName() << std::endl;
+    return 0;
 }
-
