@@ -9,10 +9,11 @@
 int main()
 {
     std::vector<Book*> Books;
-    
-    Books.push_back(new Book());
-    Books.push_back(new Book("J.K. Rowling","Harry Potter", 700 , "Fantasy",10));
-
+    /*
+    Books.push_back(new Book("J.K. Rowling","Harry Potter and the Order of The Pheonix", 870 , "Fantasy",10));
+    Books.push_back(new Book("Suzanne Collins", "The Hunger Games", 374, "Fiction", 15));
+    Books.push_back(new Book("Harper Lee", "To Kill a Mockingbird", 324, "Classics", 10));
+    */
     displayMenu(Books);
 
 
