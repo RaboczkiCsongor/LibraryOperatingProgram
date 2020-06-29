@@ -5,6 +5,8 @@ void line() {
 	std::cout <<std::endl;
 }
 void MenuOptions() {
+	std::cout << "6. Load from file" << std::endl;
+	std::cout << "5. Save to file" << std::endl;
 	std::cout << "4. Remove a book" << std::endl;
 	std::cout << "3. Add a book" << std::endl;
 	std::cout << "2. Search" << std::endl;
@@ -25,8 +27,17 @@ int InputCheck() {
 	
 	return SelectionNum;
 }
-int SearchForBook(std::string) {
-
+void SearchForBookByName(std::string name, std::vector<Book*>& myVector) {
+	std::string SearchTerm;
+	
+	std::cin >> SearchTerm;
+	for (auto p : myVector) {
+		std::string ElementOfSearch = p->getTitle();
+		if (ElementOfSearch.find(SearchTerm) != std::string::npos) {
+			std::cout << p->getTitle() << " available copy/copies: " 
+				<< p->getQuantity() << std::endl;
+		}
+	}
 }
 
 void displayMenu(std::vector<Book*> &myVector) {
@@ -40,7 +51,7 @@ void displayMenu(std::vector<Book*> &myVector) {
 			case 1: // list all
 				for (auto p : myVector) {
 					std::cout << p->getAuthor() << std::endl;
-					std::cout << p->getName() << std::endl;
+					std::cout << p->getTitle() << std::endl;
 				}
 				break;
 			case 2: // search for book
@@ -48,6 +59,12 @@ void displayMenu(std::vector<Book*> &myVector) {
 			case 3: // add book
 				break;
 			case 4: //remove book
+				break;
+			case 5: 
+				SaveToFile(myVector);
+				break;
+			case 6:
+				LoadFromFile(myVector);
 				break;
 			}
 		} while (Selection != 0);
