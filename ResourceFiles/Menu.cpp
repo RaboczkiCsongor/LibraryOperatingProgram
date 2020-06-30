@@ -43,6 +43,7 @@ void SearchForBookByName(std::string name, std::vector<Book*>& myVector) {
 void displayMenu(std::vector<Book*> &myVector) {
 	int Selection;
 		do{
+			int idx = 1;
 			line();
 			MenuOptions();
 			line();
@@ -50,8 +51,11 @@ void displayMenu(std::vector<Book*> &myVector) {
 			switch (Selection) {
 			case 1: // list all
 				for (auto p : myVector) {
-					std::cout << p->getAuthor() << std::endl;
-					std::cout << p->getTitle() << std::endl;
+					std::cout << idx << ". ";
+					std::cout << p->getAuthor() << "\t";
+					std::cout << p->getTitle() << "\t";
+					std::cout << "Available: "<<p->getQuantity() << std::endl;
+					idx++;
 				}
 				break;
 			case 2: // search for book
