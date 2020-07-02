@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 class Book {
 	std::string Author;
@@ -20,5 +21,6 @@ public:
 	void setGenre(std::string newGenre);
 	int getQuantity();
 	void setQuantity(int nQuantity);
+	void PrintForList();
 
 };
