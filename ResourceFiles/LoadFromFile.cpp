@@ -8,6 +8,9 @@ void LoadFromFile(std::vector<Book*> &myVector) {
 	if (myFile.is_open()) {
 		while (!myFile.eof()) {
 			std::getline(myFile, line);
+			if (line == "") {
+				break;
+			}
 			std::string Author = "", Title = "", Genre = "";
 			int Pages = 0, Quantity = 0;
 			int SavePos = 0;
