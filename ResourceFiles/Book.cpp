@@ -39,3 +39,7 @@ int Book::getQuantity() {
 void Book::setQuantity(int nQuantity) {
 	this->Quantity = nQuantity;
 }
+
+void Book::PrintForList() {
+	std::cout << this->getAuthor() << ": " << this->getTitle() << " Available: " << this->getQuantity() << std::endl;
+}
