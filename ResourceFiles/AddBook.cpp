@@ -18,8 +18,11 @@ int InputCheckForAddBook() {
 void AddBook(std::vector<Book*>& myVector) {
 	std::string tempAuthor, tempTitle, tempGenre = "";
 	int tPages ,tQuantity = 0;
-	std::cout << "New books author: ";
+	std::cout << "New books author(To leave type in Exit): ";
 	std::getline(std::cin, tempAuthor);
+	if (tempAuthor == "Exit" || tempAuthor == "exit") {
+		return;
+	}
 	std::cout << "New books title: ";
 	std::getline(std::cin, tempTitle);
 	std::cout << "New books page number: ";
