@@ -6,10 +6,11 @@
 #include "Book.h"
 #include "SaveLoadMenu.h"
 #include "AddBook.h"
-constexpr auto MenuWidth = 15;
+#include "SearchMenu.h"
+#include "InputHeader.h"
+#include "line.h"
 
 void SearchForBookByName(std::string name, std::vector<Book*> &myVector);
-void line();
 void displayMenu(std::vector<Book*> &myVector);
 void MenuOptions();
 void ListAllMenu(std::vector<Book*> &myVector);
