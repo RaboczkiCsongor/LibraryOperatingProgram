@@ -3,8 +3,8 @@
 
 void MenuOptions() {
 	std::cout << "4. Save/Load" << std::endl;
-	std::cout << "3. Remove a book" << std::endl;
-	std::cout << "2. Add a new book" << std::endl;
+	std::cout << "3. Restoration" << std::endl;
+	std::cout << "2. Add/Remove" << std::endl;
 	std::cout << "1. Search" << std::endl;
 	std::cout << "0. Exit" << std::endl;
 }
@@ -23,19 +23,6 @@ void SearchForBookByName(std::string name, std::vector<Book*>& myVector) {
 }
 
 
-void RemoveBook(std::vector<Book*>& myVector) {
-	int removeidx;
-	ListAllMenu(myVector);
-	std::cout << "Please provide the ID number of book you would like to remove from inventory" << std::endl;
-	removeidx = InputCheckFunction() -1;
-	if (removeidx == -1) {
-		return;
-	}
-	else
-		delete myVector[removeidx];
-	
-}
-
 void displayMenu(std::vector<Book*> &myVector) {
 	int Selection;
 		do{
@@ -45,19 +32,15 @@ void displayMenu(std::vector<Book*> &myVector) {
 			Selection = InputCheckFunction();
 			switch (Selection) {
 			case 1: // search for book
-				line();
 				DisplaySearchMenu(myVector);
 				line();
 				break;
-			case 2: // add book
-				line();
-				AddBook(myVector);
+			case 2: // add/remove
+				DisplayAddRemoveMenu(myVector);
 				line();
 				break;
-			case 3: //remove book
-				line();
-				RemoveBook(myVector);
-				line();
+			case 3: 
+				Restoration(myVector);
 				break;
 			case 4:
 				LineWithName("Save/Load Menu");
