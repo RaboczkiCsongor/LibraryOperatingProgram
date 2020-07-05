@@ -1,10 +1,10 @@
 #include "LoadFromFile.h"
 
 
-void LoadFromFile(std::vector<Book*> &myVector) {
+void LoadFromFile(std::vector<Book*> &myVector, std::string FileName) {
 	std::ifstream myFile;
 	std::string line;
-	myFile.open("BookList.txt");
+	myFile.open(FileName);
 	if (myFile.is_open()) {
 		while (!myFile.eof()) {
 			std::getline(myFile, line);
