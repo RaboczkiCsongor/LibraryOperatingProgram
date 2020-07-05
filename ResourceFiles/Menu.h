@@ -3,10 +3,13 @@
 #include <string>
 #include <sstream>
 #include <vector>
+
 #include "Book.h"
+
 #include "SaveLoadMenu.h"
-#include "AddBook.h"
 #include "SearchMenu.h"
+#include "AddRemoveMenu.h"
+#include "Restoration.h"
 #include "InputHeader.h"
 #include "line.h"
 
