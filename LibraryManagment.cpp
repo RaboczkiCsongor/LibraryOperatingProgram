@@ -11,12 +11,14 @@
 
 int main()
 {
-    std::vector<Book*> Books;
+    std::vector<Book*> InventoryBooks;
 
-    LoadFromFile(Books);
-    displayMenu(Books);
+    LoadFromFile(InventoryBooks,"InventoryList.txt");
+    displayMenu(InventoryBooks);
  
-    SaveToFile(Books);
-    ClearMemory(Books);
+    SaveToFile(InventoryBooks, "InventoryList.txt");
+    ClearMemory(InventoryBooks);
+
     return 0;
 }
+
