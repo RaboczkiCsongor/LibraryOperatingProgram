@@ -21,4 +21,5 @@ void Restoration(std::vector <Book*>& myVector) {
 	}
 	myVector[idx]->setQuantity(myVector[idx]->getQuantity() + 1);
 	std::cout << "|" << std::endl;
+	std::cout << "Added a restored book to inventory!" << std::endl;
 }
