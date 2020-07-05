@@ -6,4 +6,4 @@
 #include <string>
 #include <sstream>
 
-void LoadFromFile(std::vector<Book*> &myVector);
+void LoadFromFile(std::vector<Book*> &myVector, std::string FileName);
