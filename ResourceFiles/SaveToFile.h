@@ -4,4 +4,4 @@
 #include <string>
 #include <vector>
 
-void SaveToFile(std::vector<Book*> myVector,std::string FileName);
+void SaveToFile(std::vector<Book*> myVector);
