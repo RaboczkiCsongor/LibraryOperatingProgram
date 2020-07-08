@@ -1,6 +1,6 @@
 #include "SaveToFile.h"
-void SaveToFile(std::vector<Book*> myVector){
-	std::ofstream MyFile("BookList.txt");
+void SaveToFile(std::vector<Book*> myVector, std::string FileName){
+	std::ofstream MyFile(FileName);
 	for (auto p : myVector) {
 		MyFile << p->getAuthor();
 		MyFile << "\t";
